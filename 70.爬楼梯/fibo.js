@@ -6,4 +6,4 @@ var climbStairs = function(n){
   return climbStairs(n-1) + climbStairs(n-2)
 }
 
-//递归性能太差导致时间超出
+//递归性能太差导致时间超出test b
