@@ -4,14 +4,14 @@ var hasCycle = function(head) {
   }
   let fast= head;
   let slow = head;
-  while(slow){
+  while(slow && fast){
+    if(fast.next === slow){
+      return true
+    }
     slow = slow.next;
     fast = fast.next;
-    if(fast.next){
+    if(fast && fast.next){
       fast = fast.next
-    }
-    if(slow === fast || fast.next === slow){
-      return true
     }
   }
   return false
